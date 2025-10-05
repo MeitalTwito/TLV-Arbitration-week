@@ -114,6 +114,14 @@ header ul {
   gap: 1rem;
   align-items: center;
 }
+
+.event-location svg {
+  fill: var(--main-color);
+}
+
+.event-location {
+  grid-column: 1/-1;
+}
 .speaker {
   display: grid;
   grid-template-columns: 5rem 1fr;
