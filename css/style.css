@@ -1,0 +1,209 @@
+/* 
+--- TYPOGRAPHY SYSTEM
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+--- WHITESPACE
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
+
+:root {
+  --main-color: #00b388;
+  --secondary-color: #333;
+  --main-bg-color-light: #f5f5f5;
+  --main-bg-color-dark: #111617;
+  --main-text-color-dark: #fff;
+  --main-text-color-light: #000;
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+    0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+@import url("https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  color: var(--secondary-color);
+}
+
+body {
+  font-family: "Arimo", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  overflow-x: hidden;
+  background-color: #f5f5f5;
+  /* direction: rtl; */
+}
+
+.container {
+  max-width: 40rem;
+  margin: 2rem auto;
+  background-color: #fff;
+  padding: 5rem 3rem;
+  border-radius: 2px;
+  box-shadow: var(--shadow-lg);
+  background-color: hsla(0, 0%, 100%, 1);
+  background-image: url(/img/background-100.jpg);
+  background-position: bottom;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+header {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+header img {
+  width: 100%;
+}
+.tag span {
+  background-color: #000;
+  color: white;
+  padding: 0.2rem 1rem;
+  /* border-radius: 50px; */
+  font-size: 1.3rem;
+}
+.logo-box {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+.logo.shibolet {
+  max-width: 15rem;
+}
+.logo.rpc {
+  max-width: 5rem;
+}
+.main-heading {
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: var(--main-color);
+}
+.subtitle {
+  font-size: 2rem;
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+.header-text {
+  font-size: 1.5rem;
+  line-height: 1.2;
+  /* font-weight: 600; */
+}
+
+header ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  list-style: none;
+}
+.date-time {
+  font-size: 1.2rem;
+}
+
+.date-time li {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.speaker {
+  display: grid;
+  grid-template-columns: 5rem 1fr;
+  gap: 1rem;
+  align-items: center;
+}
+.speaker img {
+  border-radius: 100%;
+  border: 3px solid var(--main-color);
+}
+.speakr-name {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.4rem;
+  gap: 1rem;
+}
+
+form input:not([type="checkbox"]),
+form select {
+  border: none;
+  border-bottom: var(--secondary-color) 1px solid;
+  border-radius: 0;
+  padding: 0.75rem 0px;
+  box-shadow: none;
+  -webkit-appearance: none; /* Remove rounded corners in Safari and Chrome on iOS */
+  -moz-appearance: none; /* Remove rounded corners in Firefox on iOS */
+  appearance: none; /* Remove rounded corners in other browsers */
+}
+
+form div {
+  display: flex;
+  flex-direction: column;
+}
+
+.optin {
+  flex-direction: row-reverse;
+  justify-content: left;
+  gap: 1rem;
+}
+
+.btn--form {
+  padding: 1rem 2rem;
+  font-size: 1.6rem;
+  background-color: #000;
+  border: #000 2px solid;
+  color: #fff;
+  text-transform: uppercase;
+  transition: all 0.5s;
+  margin-bottom: 6rem;
+  margin-top: 2rem;
+}
+
+.btn--form:hover {
+  background-color: var(--main-color);
+  border-color: var(--main-color);
+
+  cursor: pointer;
+}
+
+form h2 {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+.social-links {
+  margin-top: 3rem;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  gap: 1.4rem;
+}
+
+.social-link a:link,
+.social-link a:visited {
+  display: flex;
+  align-content: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  text-transform: capitalize;
+  font-size: 1.3rem;
+  color: #000;
+  transition: all 0.5s;
+}
+
+.social-link a:hover,
+.social-link a:active {
+  color: var(--main-color);
+}
